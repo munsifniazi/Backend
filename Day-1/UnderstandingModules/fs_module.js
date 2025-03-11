@@ -11,3 +11,17 @@ const writeFile = fs.writeFileSync(
 );
 
 console.log(writeFile);
+
+const myFileName = 'Data.txt';
+const myFilePath = path.join(__dirname, myFileName);
+
+const myWriteFile = fs.writeFileSync(
+  myFilePath,
+  'Yeh meri new test file hai ',
+  'utf8',
+);
+console.log(myWriteFile);
+
+const myReadFile = fs.readFileSync(myFilePath);
+
+console.log(myReadFile.toString());
