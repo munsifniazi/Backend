@@ -34,11 +34,11 @@ const appendFile = fs.appendFile(
 
 // const renameFile = fs.renameSync(filePath, newUpdatedFilePath);
 
-// console.log('File Renamed Successfully:', renameFile);   
+// console.log('File Renamed Successfully:', renameFile);
 
 // const deleteFile = fs.unlinkSync(filePath);
 // console.log('Deleting file: ', deleteFile);
 
-const deleteFile = fs.unlinkSync(filePath);
+const deleteFile = fs.unlink(filePath);
 
 console.log('File deleted successfully:', deleteFile);
