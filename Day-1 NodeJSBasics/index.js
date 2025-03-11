@@ -19,6 +19,11 @@
 
 // Node.js uses CommonJs Modules System, Different Functionalities ke liye different Modules hote hain.
 
-const add = require('./maths');
+const { add, subtract, divide, multiply, PI } = require('./maths');
 
 console.log(add(51, 27));
+console.log(subtract(51, 27));
+console.log(divide(51, 27));
+console.log(multiply(51, 27));
+
+console.log(PI);
