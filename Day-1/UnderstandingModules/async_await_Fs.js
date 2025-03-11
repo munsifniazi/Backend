@@ -41,13 +41,24 @@ readFolder();
 
 // appendfile();
 
-const readFile = async()=>{
-    try {
-        const data = await fs.readFile(filePath, 'utf-8');
-        console.log('File data:', data);
-    } catch (error) {
-        console.error(error);
-    }
-}
+// const readFile = async()=>{
+//     try {
+//         const data = await fs.readFile(filePath, 'utf-8');
+//         console.log('File data:', data);
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
 
-readFile();
+// readFile();
+
+const deleteFile = async () => {
+  try {
+    await fs.unlink(filePath);
+    console.log('File deleted successfully:', filePath);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+deleteFile();
