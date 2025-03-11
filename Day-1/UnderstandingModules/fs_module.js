@@ -15,6 +15,8 @@ console.log(writeFile);
 const myFileName = 'Data.txt';
 const myFilePath = path.join(__dirname, myFileName);
 
+// Create a new file
+
 const myWriteFile = fs.writeFileSync(
   myFilePath,
   'Yeh meri new test file hai ',
@@ -22,6 +24,32 @@ const myWriteFile = fs.writeFileSync(
 );
 console.log(myWriteFile);
 
-const myReadFile = fs.readFileSync(myFilePath);
+const myReadFile = fs.readFileSync(myFilePath, 'utf-8');
 
-console.log(myReadFile.toString());
+console.log(myReadFile);
+
+//Append the File
+
+const appendFile = fs.appendFileSync(
+  myFilePath,
+  '\n Hello Jee Bas check krna tha File Append ya Update hui ya nahi',
+  'utf8',
+);
+
+console.log(appendFile);
+
+// Rename the file
+
+const myNewupdatedFileName = 'myNewupdatedFile.txt';
+
+const myNewUpdatedFilePath = path.join(__dirname, myNewupdatedFileName);
+
+const renameFile = fs.renameSync(myFilePath, myNewUpdatedFilePath);
+
+console.log(renameFile);
+
+// Delete the old file
+
+const deleteFile = fs.unlinkSync(myNewUpdatedFilePath);
+
+console.log(deleteFile);
