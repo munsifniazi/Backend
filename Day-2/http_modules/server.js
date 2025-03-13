@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
     res.end();
   } else {
     res.setHeader('Content-Type', 'text/html');
-    res.write('<h1>404 Page Not Found</h1>');
+    res.write('<h1>404 Page Not Found Hehehe...........</h1>');
     res.end();
   }
 });
